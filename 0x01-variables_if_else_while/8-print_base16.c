@@ -12,7 +12,7 @@ int main(void)
 	{
 		putchar (i);
 	}
-	char c = 'a';
+	int c = 'a';
 
 	for (c = 'a'; c <= 'f'; c++)
 	{
