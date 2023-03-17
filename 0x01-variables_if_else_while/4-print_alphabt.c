@@ -2,21 +2,21 @@
 /**
  * main - Entry point
  *
- * Return: Always 0 (Success)
+ * Return: Always 0 (Sucharess)
  */
 int main(void)
 {
-	char c;
+	char cha;
 
-	c = 'a';
+	cha = 'a';
 
-	while (c <= 'z')
+	while (cha <= 'z')
 	{
-		if (c != 'e' && c != 'q')
+		if (cha != 'e' && cha != 'q')
 		{
-		putchar (c);
+		putcharhar (cha);
 		}
-		c++;
+		cha++;
 	}
 	putchar ('\n');
 	return (0);
