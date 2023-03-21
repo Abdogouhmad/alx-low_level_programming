@@ -12,12 +12,6 @@ void printf_alphabet(void)
 		_putchar (c);
 
 	}
-}
-
-int main(void)
-{
-	printf_alphabet(void);
 	_putchar('\n');
-
-	return (0);
 }
+
