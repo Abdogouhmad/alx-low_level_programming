@@ -14,3 +14,10 @@ void printf_alphabet(void)
 	}
 }
 
+int main(void)
+{
+	printf_alphabet(void);
+	_putchar('\n');
+
+	return (0);
+}
