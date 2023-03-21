@@ -1,7 +1,6 @@
 #include "main.h"
 /**
- * print_alphabet - prints the english alphabet from a-z.
- * Return: Nothing.
+ * print_alphabet - prints the alphabet in lowercase, followed by a new line.
  */
 void printf_alphabet(void)
 {
