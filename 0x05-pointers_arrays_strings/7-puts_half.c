@@ -17,5 +17,6 @@ int i = 0;
 	{
 		_putchar(str[i]);
 	}
-	_putchar ('\n');
+	_putchar('\0');
+	printf("\n");
 }
