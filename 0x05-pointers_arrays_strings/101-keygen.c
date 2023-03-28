@@ -1,6 +1,5 @@
 /*
  * File: 101-keygen.c
- * Auth: Brennan D Baraban
  */
 
 #include <stdio.h>
@@ -15,45 +14,18 @@
  */
 int main(void)
 {
-	char password[84];
-	int index = 0, sum = 0, diff_half1, diff_half2;
+char ps[80];
+int sum = 0, i = 0;
+srand(time(0));
 
-	srand(time(0));
+for (; sum <= 2772 - 121; i++)
+{
+	char c = rand() % 94 + 33;
 
-	while (sum < 2772)
-	{
-		password[index] = 33 + rand() % 94;
-		sum += password[index++];
-	}
-
-	password[index] = '\0';
-
-	if (sum != 2772)
-	{
-		diff_half1 = (sum - 2772) / 2;
-		diff_half2 = (sum - 2772) / 2;
-		if ((sum - 2772) % 2 != 0)
-			diff_half1++;
-
-		for (index = 0; password[index]; index++)
-		{
-			if (password[index] >= (33 + diff_half1))
-			{
-				password[index] -= diff_half1;
-				break;
-			}
-		}
-		for (index = 0; password[index]; index++)
-		{
-			if (password[index] >= (33 + diff_half2))
-			{
-				password[index] -= diff_half2;
-				break;
-			}
-		}
-	}
-
-	printf("%s", password);
-
+	ps[i] = c;
+	sum += c;
+}
+ps[i] = 2772 - sum;
+printf("%s\n", ps);
 	return (0);
 }
