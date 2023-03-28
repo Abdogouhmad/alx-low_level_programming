@@ -14,18 +14,24 @@
  */
 int main(void)
 {
-char ps[80];
-int sum = 0, i = 0;
-srand(time(0));
+	char pass[99];
+	int total = 0;
+	int i;
 
-for (; sum <= 2772 - 121; i++)
-{
-	char c = rand() % 94 + 33;
+	srand(time(0));
 
-	ps[i] = c;
-	sum += c;
-}
-ps[i] = 2772 - sum;
-printf("%s\n", ps);
+	while (total <= 2646)
+	{
+		char c = (char)(rand() % 94 + 33);
+
+		pass[i] = c;
+		total += c;
+		i++;
+	}
+
+	pass[i] = (char)(2772 - total);
+
+	printf("%s", pass);
+
 	return (0);
 }
