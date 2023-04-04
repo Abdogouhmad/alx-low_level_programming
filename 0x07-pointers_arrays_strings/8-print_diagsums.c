@@ -8,17 +8,13 @@
 */
 void print_diagsums(int *a, int size)
 {
-	int counter = 0, answer1 = 0, answer2 = 0;
+	int i, answer1, answer2;
 
-	for (counter = 0; counter < size; counter++)
+	answer1 = answer2 = 0;
+	for (i = 0; i < size; i++)
 	{
-		answer1 += *(a + counter * size + counter);
+	answer1 += *(a + i * size + i);
+	answer2 += *(a + i * size + (size - 1 - i));
 	}
-
-		for (counter = 0; counter < size; counter++)
-	{
-		answer2 += *(a + counter * size + (size - 1 - counter));
-	}
-	printf("%d, %d \n", answer1, answer2);
-
+printf("%d, %d\n", answer1, answer2);
 }
