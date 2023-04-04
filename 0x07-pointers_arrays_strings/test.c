@@ -4,6 +4,8 @@
 
 int main(void)
 {
+    int i;
     printf("hello");
+    scanf("%i",&i);
     return 0;
 }
