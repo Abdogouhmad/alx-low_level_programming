@@ -18,7 +18,7 @@ Write a function that copies memory area.
 2. The ```_memcpy()``` function copies n bytes from memory area src to memory area dest
 3. Returns a pointer to dest.
 
-- FYI: The standard library provides a similar function: memcpy. Run man memcpy to learn more.
+- FYI: The standard library provides a similar function: ```memcpy```. Run ```man memcpy``` to learn more.
 
 ## task 2
 
@@ -27,13 +27,13 @@ Write a function that locates a character in a string.
 1. Prototype: ```char *_strchr(char *s, char c);```
 2. Returns a pointer to the first occurrence of the character c in the string s, or NULL if the character is not found
 
-- FYI: The standard library provides a similar function: strchr. Run man strchr to learn more.
+- FYI: The standard library provides a similar function: ```strchr```. Run ```man strchr``` to learn more.
 
 ## task 3
 
 Write a function that gets the length of a prefix substring.
 
-1. Prototype: unsigned int _strspn(char *s, char *accept);
+1. Prototype: ```unsigned int _strspn(char *s, char *accept);```
 2. Returns the number of bytes in the initial segment of s which consist only of bytes from accept.
 
 - FYI: The standard library provides a similar function: ```strspn```. Run ```man strspn``` to learn more.
@@ -43,7 +43,7 @@ Write a function that gets the length of a prefix substring.
 Write a function that searches a string for any of a set of bytes.
 
 1. Prototype: ```char *_strpbrk(char *s, char *accept);```
-2. The _strpbrk() function locates the first occurrence in the string s of any of the bytes in the string accept
+2. The ```_strpbrk()``` function locates the first occurrence in the string s of any of the bytes in the string accept
 3. Returns a pointer to the byte in s that matches one of the bytes in accept, or NULL if no such byte is found
 
 - FYI: The standard library provides a similar function: ```strpbrk```. Run ```man strpbrk`` to learn more.
