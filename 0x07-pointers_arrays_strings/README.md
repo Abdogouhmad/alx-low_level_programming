@@ -56,7 +56,7 @@ FYI: The standard library provides a similar function: strstr. Run man strstr to
 
 Write a function that prints the chessboard.
 
-1. Prototype: void print_chessboard(char (*a)[8]);
+1. Prototype: ```void print_chessboard(char (*a)[8]);```
 
 ## task 7
 
