@@ -8,22 +8,22 @@
 */
 char *_strstr(char *haystack, char *needle)
 {
-	char *a, *b;
-	int i = 0;
+	char *g, *z;
+	int d = 0;
 
 	if (!*needle)
 	return (haystack);
 
-	for (; haystack[i]; haystack++)
+	for (; haystack[d]; haystack++)
 	{
-		a = &haystack[i];
-		b = needle;
-		for (; *a && *b && *a == *b; a++, b++)
+		g = &haystack[d];
+		z = needle;
+		for (; *g && *z && *g == *z; g++, z++)
 		;
 
-		if (!*b)
+		if (!*z)
 		{
-			return (&haystack[i]);
+			return (&haystack[d]);
 		}
 	}
 	return (NULL);
