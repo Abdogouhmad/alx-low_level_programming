@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+/* by div-styl*/
 /**
  * _pow_recursion -factorial
  * @x: 1st number

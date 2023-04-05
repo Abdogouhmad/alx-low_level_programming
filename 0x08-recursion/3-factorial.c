@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+/*by div-styl*/
 /**
  * factorial - multiplay each number starting of number 1 to end
  * @n: refers to the number we would apply the factorial
