@@ -13,4 +13,5 @@ int prime_aid (int n, int aid);
 int is_palindrome(char *s);
 int get_str_lenght(char *s);
 int paliandrome_aid (char *s, int a, int z);
+int wildcmp(char *s1, char *s2);
 #endif
