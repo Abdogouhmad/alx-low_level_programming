@@ -10,4 +10,7 @@ int _sqrt_recursion(int n);
 int sqr_rt(int n, int sqrrtnum);
 int is_prime_number(int n);
 int prime_aid (int n, int aid);
+int is_palindrome(char *s);
+int get_str_lenght(char *s);
+int paliandrome_aid (char *s, int a, int z);
 #endif
