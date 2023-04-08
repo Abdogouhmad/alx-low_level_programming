@@ -14,7 +14,7 @@
 int main(int argc, char  **argv)
 {
 	int a, b, x, sum = 0;
-	bool flag = false; 
+	bool flag = false;
 
 	if (argc < 2)
 	{
