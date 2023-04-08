@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <stdbool.h>
 /*by div-styl*/
 /**
  * main - add up two numbers.
@@ -13,11 +14,12 @@
 int main(int argc, char  **argv)
 {
 	int a, b, x, sum = 0;
+	bool flag = false; 
 
 	if (argc < 2)
 	{
 		printf("0\n");
-		return (2);
+		flag = true;
 	}
 	for (a = 1; a < argc; a++)
 	{
@@ -32,6 +34,7 @@ int main(int argc, char  **argv)
 		x = strtol(argv[a], NULL, 10);
 		sum = sum + x;
 	}
-	printf("%d\n", sum);
+	if (!flag)
+		printf("%d\n", sum);
 	return (0);
 }
