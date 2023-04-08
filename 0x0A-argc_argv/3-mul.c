@@ -2,15 +2,20 @@
 #include <stdlib.h>
 /*by div-styl*/
 /**
- * main - printf the name of the program
- * @argc: is the number of the argument
- * @argv: is the array of the argumet (string)
+ * main - multiplies only two numbers.
+ * incase you gave up to 3 numbers the output: Error
+ * @argc: argument count
+ * @argv: arguments
  * Return: 0
-*/
+ */
 int main(int argc, char  **argv)
 {
 	int i, sum;
-
+	if (argc != 3)
+		{
+			printf("Error\n");
+			return (1);
+		}
 	if (argc > 1)
 	{
 		sum = atoi(argv[1]);
@@ -19,11 +24,6 @@ int main(int argc, char  **argv)
 			sum = sum * atoi(argv[i]);
 		}
 		printf("%d\n", sum);
-	}
-	else
-	{
-		printf("Error\n");
-		return (1);
 	}
 return (0);
 }
