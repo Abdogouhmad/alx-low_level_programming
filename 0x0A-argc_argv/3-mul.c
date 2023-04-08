@@ -2,9 +2,9 @@
 #include <stdlib.h>
 /*by div-styl*/
 /**
- * main - that multiplies two numbers.
+ * main - printf the name of the program
  * @argc: is the number of the argument
- * @argv: is the array of the argumet (input)
+ * @argv: is the array of the argumet (string)
  * Return: 0
 */
 int main(int argc, char  **argv)
