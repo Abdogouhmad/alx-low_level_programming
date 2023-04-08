@@ -12,12 +12,12 @@
  */
 int main(int argc, char  **argv)
 {
-	int a, b, sum;
+	int a, b, x, sum = 0;
 
-	if (argc < 2)
+	if (argc <= 2)
 	{
 		printf("0\n");
-	return (0);
+		return (2);
 	}
 	for (a = 1; a < argc; a++)
 	{
@@ -29,8 +29,8 @@ int main(int argc, char  **argv)
 				return (1);
 			}
 		}
-		sum = atoi(argv[1]);
-		sum += atoi(argv[a]);
+		x = strtol(argv[a], NULL, 10);
+		sum = sum + x;
 	}
 	printf("%d\n", sum);
 	return (0);
