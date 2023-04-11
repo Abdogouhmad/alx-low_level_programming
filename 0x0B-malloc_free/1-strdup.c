@@ -27,6 +27,5 @@ char *_strdup(char *str)
 	{
 		duplicater[i] = str[i];
 	}
-	free(duplicater);
 	return (str);
 }
