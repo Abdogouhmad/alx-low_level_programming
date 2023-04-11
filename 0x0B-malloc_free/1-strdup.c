@@ -8,7 +8,7 @@
 */
 char *_strdup(char *str)
 {
-	int i = 0;
+	unsigned int i = 0;
 	unsigned int len = 0;
 	char *duplicater;
 
@@ -19,7 +19,7 @@ char *_strdup(char *str)
 	else if (duplicater == NULL)
 		return (NULL);
 
-	for (; str < '\0'; len++)
+	for (; str[len] < '\0'; len++)
 	{
 		len++;
 	}
