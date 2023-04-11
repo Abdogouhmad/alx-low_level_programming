@@ -19,7 +19,7 @@ char *_strdup(char *str)
 	else if (duplicater == NULL)
 		return (NULL);
 
-	for (; str[len] < '\0'; len++)
+	for (; str[len] != '\0'; len++)
 	{
 		len++;
 	}
@@ -27,5 +27,5 @@ char *_strdup(char *str)
 	{
 		duplicater[i] = str[i];
 	}
-	return (str);
+	return (duplicater);
 }
