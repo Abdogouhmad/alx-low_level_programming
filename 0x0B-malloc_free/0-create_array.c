@@ -20,16 +20,14 @@ char *create_array(unsigned int size, char c)
 	}
 	matrix = (char *) malloc(size * sizeof(char *));
 
-	if (matrix == 0)
+	if (matrix == NULL)
 	{
 		return (NULL);
 	}
-	else
+
+	for (i = 0; i < size; i++)
 	{
-		for (; i < size; i++)
-		{
-			matrix[i] = c;
-		}
+		matrix[i] = c;
 	}
 return (matrix);
 }
