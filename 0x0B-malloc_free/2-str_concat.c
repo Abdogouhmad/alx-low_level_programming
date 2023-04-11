@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-
 /**
  * stringlen - calculates the length of a string.
  * @string: input string
@@ -10,10 +9,9 @@ int stringlen(char *string)
 {
 	int len = 0;
 
-	while (*string)
+	for (; string[len] == '\0'; len++)
 	{
-		len++;
-		string++;
+
 	}
 	return (len);
 }
@@ -58,3 +56,4 @@ char *str_concat(char *s1, char *s2)
 
 	return (stringcnt);
 }
+
