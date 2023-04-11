@@ -6,7 +6,7 @@
  * @string: input string
  * Return: length of string
  */
-int _stringlen(char *string)
+int stringlen(char *string)
 {
 	int len = 0;
 
@@ -34,8 +34,8 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	}
 
-	ls1 = _stringlen(s1);
-	ls2 = _stringlen(s2);
+	ls1 = stringlen(s1);
+	ls2 = stringlen(s2);
 
 	stringcnt = (char *)malloc((ls1 + ls2 + 1) * sizeof(char));
 
