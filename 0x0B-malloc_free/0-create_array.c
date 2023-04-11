@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 /*by div-styl*/
 /**
  * create_array - creates an array of chars,
