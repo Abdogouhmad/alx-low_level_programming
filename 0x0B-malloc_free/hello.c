@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -28,7 +28,6 @@ char *str_concat(char *s1, char *s2)
 {
 	int ls1 = 0, ls2 = 0, i = 0;
 	char *stringcnt;
-
     if (s1 == NULL)
     {
         s1 = "";
@@ -62,4 +61,44 @@ char *str_concat(char *s1, char *s2)
 	stringcnt[ls1 + ls2] = '\0';
 
 	return (stringcnt);
+}
+
+
+/**
+ * main - check the code .
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+	char *s;
+
+	s = str_concat("Hello", NULL);
+	if (s == NULL)
+	{
+		printf("failed\n");
+		return (1);
+	}
+	printf("%s\n", s);
+	free(s);
+
+    s = str_concat(NULL, "Hello");
+	if (s == NULL)
+	{
+		printf("failed\n");
+		return (1);
+	}
+	printf("%s\n", s);
+	free(s);
+
+    s = str_concat(NULL, NULL);
+	if (s == NULL)
+	{
+		printf("failed\n");
+		return (1);
+	}
+	printf("%s\n", s);
+	free(s);
+
+	return (0);
 }
