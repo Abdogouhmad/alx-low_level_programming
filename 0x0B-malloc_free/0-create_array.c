@@ -19,7 +19,7 @@ char *create_array(unsigned int size, char c)
 	}
 	matrix = (char *) malloc(size * sizeof(char *));
 
-	if (matrix == NULL)
+	if (matrix == 0)
 	{
 		return (NULL);
 	}
