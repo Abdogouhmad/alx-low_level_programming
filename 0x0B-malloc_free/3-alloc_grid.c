@@ -35,7 +35,7 @@ int **alloc_grid(int width, int height)
 		}
 		return (NULL);
 		}
-		
+
 		for (; c < width; c++)
 		{
 			art[r][c] = 0;
