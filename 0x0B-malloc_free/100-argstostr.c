@@ -1,7 +1,6 @@
 #include "main.h"
-#include "stdlib.h"
+#include <stdlib.h>
 #include <stdio.h>
-/*by div-styl*/
 
 /**
  * stringlen - calculates the length of a string.
@@ -12,47 +11,26 @@ int stringlen(char *string)
 {
 	int len = 0;
 
-	while (string != NULL && *string)
+	while (string != NULL && *string != '\0')
 	{
 		len++;
 		string++;
 	}
 	return (len);
 }
-/**
- * _strcpy - a function that copies the string pointed to by src,
- * including the terminating null byte (\0),
- * to the buffer pointed to by dest.
- *
- * @dest: A pointer to destination of string
- * @src: A pointer to source string to copy from
- *
- * Return: pointer to dest
- */
-char *_strcpy(char *dest, const char *src)
-{
-	int index = 0;
 
-	while (src[index])
-	{
-		dest[index] = src[index];
-		index++;
-	}
-	dest[index] = '\0';
-	return (dest);
-}
 /**
- * argstostr -function that concatenates all the arguments of your program.
- * @ac: number of argu
- * @av: statment argu
- * Return: string input
-*/
+ * argstostr - function that concatenates all the arguments of your program.
+ * @ac: number of arguments
+ * @av: array of arguments
+ * Return: concatenated string
+ */
 char *argstostr(int ac, char **av)
 {
-	int lensum = 0, i = 0, add = 0;
+	int lensum = 0, i = 0, add = 0, j = 0;
 	char *rst;
 
-	if (ac == 0 || av == 0)
+	if (ac == 0 || av == NULL)
 		return (NULL);
 
 	for (; i < ac; i++)
@@ -61,15 +39,17 @@ char *argstostr(int ac, char **av)
 	}
 	lensum += ac;
 	rst = (char *) malloc((lensum + 1) * sizeof(char));
-		if (rst == NULL)
-		{
-			return (NULL);
-		}
-
-	for (; i < ac; i++)
+	if (rst == NULL)
 	{
-		_strcpy(rst + add, av[i]);
-		add += stringlen(av[i]);
+		return (NULL);
+	}
+
+	for (i = 0; i < ac; i++)
+	{
+		for (j = 0; av[i][j] != '\0'; j++)
+		{
+			rst[add++] = av[i][j];
+		}
 		rst[add++] = '\n';
 	}
 	rst[add] = '\0';
