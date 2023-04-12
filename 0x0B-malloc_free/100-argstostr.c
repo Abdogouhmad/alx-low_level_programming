@@ -42,48 +42,36 @@ char *_strcpy(char *dest, const char *src)
 	return (dest);
 }
 /**
- * 
- * 
- * 
- * 
- * 
+ * argstostr -function that concatenates all the arguments of your program.
+ * @ac: number of argu
+ * @av: statment argu
+ * Return: string input
 */
 char *argstostr(int ac, char **av)
 {
-    int lensum = 0, i = 0, add = 0;
-    char *rst;
-    if (ac == 0 || av == 0)
-        return (NULL);
+	int lensum = 0, i = 0, add = 0;
+	char *rst;
 
-    for (; i < ac; i ++)
-    {
-        lensum += stringlen(av[i]);
-    }
-    lensum += ac;
-    rst = (char*) malloc((lensum + 1) * sizeof(char));
-        if (rst == NULL)
-            return (NULL);
-    
-    for (; i < ac; i++)
-    {
-        _strcpy (rst + add, av[i]);
-        add += stringlen(av[i]);
-        rst [add++] = '\n';
-    }
-    rst[add] = '\0';
-    return (rst);
- }
+	if (ac == 0 || av == 0)
+		return (NULL);
 
- int main(int ac, char *av[])
-{
-    char *s;
+	for (; i < ac; i++)
+	{
+		lensum += stringlen(av[i]);
+	}
+	lensum += ac;
+	rst = (char *) malloc((lensum + 1) * sizeof(char));
+		if (rst == NULL)
+		{
+			return (NULL);
+		}
 
-    s = argstostr(ac, av);
-    if (s == NULL)
-    {
-        return (1);
-    }
-    printf("%s", s);
-    free(s);
-    return (0);
+	for (; i < ac; i++)
+	{
+		_strcpy(rst + add, av[i]);
+		add += stringlen(av[i]);
+		rst[add++] = '\n';
+	}
+	rst[add] = '\0';
+	return (rst);
 }
