@@ -8,6 +8,4 @@ int **alloc_grid(int width, int height);
 void free_grid(int **grid, int height);
 char *argstostr(int ac, char **av);
 char **strtow(char *str);
-void _strcopy(char *dest, char *src, int len);
-int _strlen(char *str);
 #endif
