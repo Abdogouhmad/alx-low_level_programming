@@ -42,10 +42,25 @@ char **strtow(char *str)
 {
 	int i = 0, len = 0, w = 0, j = 0;
 	int index = 0, beginning = 0, inw = 0, wrdlen = 0;
+	int add;
 	char **wrd;
 
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
+	add = 1;
+	while (str[i] != '\0')
+	{
+		if (str[i] != ' ')
+		{
+			add = 0;
+			break;
+		}
+		i++;
+	}
+
+	if (add)
+		return (NULL);
+
 	len = _strlen(str);
 
 	for (i = 0; i < len; i++)
