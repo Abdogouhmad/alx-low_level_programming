@@ -1,5 +1,6 @@
 #include <stdlib.h>
-#include "main.h"
+
+#include <stdio.h>
 
 /**
  * stringlen - calculates the length of a string.
@@ -17,6 +18,7 @@ int stringlen(char *string)
 	}
 	return (len);
 }
+
 /**
  * _strcopy - duplicate string from place to another
  * @src: the target location we will stock the string in
@@ -34,16 +36,18 @@ void _strcopy(char *dest, char *src, int len)
 	}
 	dest[len] = '\0';
 }
+
 /**
- *string_nconcat -function that concatenates two strings.
- *@s1: 1st string
- *@s2: 2nd string
- *@n: size of string
- *Return: the string
+ * string_nconcat - function that concatenates two strings.
+ * @s1: 1st string
+ * @s2: 2nd string
+ * @n: size of string to be concatenated from s2
+ * Return: the concatenated string
  **/
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int len1 = 0, len2 = 0, i;
+	int len1 = 0;
+	unsigned int i;
 	char *answer;
 
 	if (s1 == NULL)
@@ -52,7 +56,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 
 	len1 = stringlen(s1);
-	len2 = stringlen(s2);
+
 
 
 	answer = (char *) malloc((len1 + n + 1) * sizeof(char));
@@ -62,9 +66,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	_strcopy(answer, s1, len1);
 
-	for (i = len1; i < n && s2[i - len1] != '\0'; i++)
+	for (i = len1; i < len1 + n; i++)
 	{
 		answer[i] = s2[i - len1];
 	}
-return (answer);
+
+	answer[len1 + n] = '\0';
+
+	return (answer);
 }
+
