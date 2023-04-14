@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include "main.h"
+#include <stdio.h>
 /*div-styl*/
 /**
  *array_range -function that creates an array of integers.
@@ -10,7 +11,7 @@
 int *array_range(int min, int max)
 {
 	int i = 0;
-	size_t sum = 0;
+	int sum = 0;
 	int *matrix;
 
 	if (min > max)
