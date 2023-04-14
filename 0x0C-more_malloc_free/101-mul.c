@@ -34,7 +34,6 @@ int multiply(char *num1, char *num2)
 	sum = atoi(num1) * atoi(num2);
 	return (sum);
 }
-
 /**
  * main - get the arguments from user
  * @argc: number of arguments
@@ -56,7 +55,7 @@ int main(int argc, char *argv[])
 	num1 = argv[1];
 	num2 = argv[2];
 
-	if (atoi(num1) <= 0 || atoi(num2) <= 0)
+	if (atoi(num1) <= 0 || atoi(num2) == 0)
 	{
 		printf("Error\n");
 		exit(98);
