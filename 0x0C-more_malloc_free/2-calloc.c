@@ -2,13 +2,13 @@
 #include <stdlib>
 /*by div-styl*/
 /**
- *memset -set black of memory to value
+ *_memset -set black of memory to value
  *@ptr: 1st argu
  *@v: 2nd value
  *@nb: size
  *Return: ptr
 */
-void *memset(void *ptr, int v, size_t nb)
+void *_memset(void *ptr, int v, size_t nb)
 {
 	unsigned char *p = (unsigned char *)ptr;
 
@@ -37,6 +37,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	cal = malloc(sum);
 	if (cal == NULL)
 		return (NULL);
-	memset(cal, 0, sum);
+	_memset(cal, 0, sum);
 	return (cal);
 }
