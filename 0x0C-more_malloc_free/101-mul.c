@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include "main.h"
 /*by div-styl*/
 /**
  * multiply - multiply the arguments
@@ -55,7 +56,7 @@ int main(int argc, char *argv[])
 	num1 = argv[1];
 	num2 = argv[2];
 
-	if (atoi(num1) <= 0 || atoi(num2) == 0)
+	if (atoi(num1) <= 0 || atoi(num2) <= 0)
 	{
 		printf("Error\n");
 		exit(98);
