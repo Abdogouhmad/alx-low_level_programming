@@ -1,17 +1,17 @@
-#include "main.h"
 #include <stdlib.h>
-/*by div-styl*/
+#include <stdio.h>
+#include <string.h>
+
 /**
- *_realloc -function that reallocates a memory block using malloc and free
- *@ptr: pointer
- *@old_size: 1st int
- *@new_size: 2nd int
- *Return: string
+ * _realloc - function that reallocates a memory block using malloc and free
+ * @ptr: pointer to the memory block
+ * @old_size: old size of the memory block
+ * @new_size: new size of the memory block
+ * Return: pointer to the reallocated memory block
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	char *str = (char *)ptr;
-	char *dst = (char *)m;
 	void *m;
 	unsigned int i = 0;
 
@@ -30,15 +30,17 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	{
 		return (ptr);
 	}
+
 	m = malloc(new_size);
 
 	if (m == NULL)
 	{
 		return (NULL);
 	}
+
 	for (i = 0; i < old_size && i < new_size; i++)
 	{
-		dest[i] = src[i];
+		((char *)m)[i] = str[i];
 	}
 
 	free(ptr);
