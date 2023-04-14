@@ -13,7 +13,6 @@ int multiply(char *num1, char *num2)
 	int sum = 0;
 	int i = 0;
 
-	// Check if num1 contains only digits
 	for (i = 0; num1[i] != '\0'; i++)
 	{
 		if (!isdigit(num1[i]))
@@ -23,7 +22,6 @@ int multiply(char *num1, char *num2)
 		}
 	}
 
-	// Check if num2 contains only digits
 	for (i = 0; num2[i]; i++)
 	{
 		if (!isdigit(num2[i]))
