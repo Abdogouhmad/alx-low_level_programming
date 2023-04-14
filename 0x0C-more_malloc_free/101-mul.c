@@ -43,7 +43,9 @@ int multiply(char *num1, char *num2)
  */
 int main(int argc, char *argv[])
 {
-	int num1, num2, total = 0;
+	char *num1;
+	char *num2; 
+	int total = 0;
 
 	if (argc != 3)
 	{
@@ -51,16 +53,16 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[2]);
+	num1 = argv[1];
+	num2 = argv[2];
 
-	if (num1 <= 0 || num2 <= 0)
+	if (atoi(num1) <= 0 || atoi(num2) <= 0)
 	{
 		printf("Error\n");
 		exit(98);
 	}
 
-	total = multiply(argv[1], argv[2]);
+	total = multiply(num1, num2);
 	printf("%d\n", total);
 
 	return (0);
