@@ -44,7 +44,7 @@ int multiply(char *num1, char *num2)
 int main(int argc, char *argv[])
 {
 	char *num1;
-	char *num2; 
+	char *num2;
 	int total = 0;
 
 	if (argc != 3)
