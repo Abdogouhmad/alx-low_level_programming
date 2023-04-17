@@ -1,5 +1,6 @@
 #include "dog.h"
 #include <stdlib.h>
+#include <stdio.h>
 /**
  *_strlen -count the string len
 *@s: the string
@@ -22,7 +23,7 @@ int len = 0;
 *@src: source cpy
 *Return: dest
 */
-char *_strcpy(char *dest, const char *src)
+char *_strcpy(char *dest, char *src)
 {
 int index = 0;
 
@@ -54,13 +55,13 @@ if (newdog == NULL)
 {
 return (NULL);
 }
-newdog->name = malloc(sizeof(char) * (name_len + 1));
+newdog->name = malloc((name_len + 1));
 if (newdog->name == NULL)
 {
 	free(newdog);
 	return (NULL);
 }
-	newdog->owner = malloc(sizeof(char) * (owner_name_len + 1));
+	newdog->owner = malloc((owner_name_len + 1));
 
 	if (newdog->owner == NULL)
 	{
