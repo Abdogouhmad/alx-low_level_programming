@@ -1,6 +1,5 @@
 #include "dog.h"
 #include <stdlib.h>
-#include <stdio.h>
 /**
  *_strlen -count the string len
 *@s: the string
@@ -8,13 +7,11 @@
 */
 int _strlen(char *s)
 {
-int len = 0, i = 0;
+int len = 0;
 
-for (i; s[i] != '\0'; i++)
-{
-	len++;
-}
-return (len);
+	while (s[len] != '\0')
+		len++;
+	return (len);
 }
 /**
  *_strcpy -cpy string from src to dest
@@ -22,15 +19,16 @@ return (len);
 *@src: source cpy
 *Return: dest
 */
-char *_strcpy(char *dest, char *src)
+char *_strcpy(char *dest, const char *src)
 {
-int i = 0;
+int index = 0;
 
-for (i; src[i] != '\0')
+while (src[index])
 {
-dest[i] = src[i];
+	dest[index] = src[index];
+	index++;
 }
-dest[i] = '\0';
+dest[index] = '\0';
 return (dest);
 }
 /**
