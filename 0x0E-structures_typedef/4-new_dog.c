@@ -8,10 +8,11 @@
 */
 int _strlen(char *s)
 {
-int len = 0;
+int len = 0, i = 0;
 
-for (i; i < s[i] = '\0'; i++)
+for (i; s[i] != '\0'; i++)
 {
+	len++;
 }
 return (len);
 }
@@ -25,7 +26,7 @@ char *_strcpy(char *dest, char *src)
 {
 int i = 0;
 
-for (i; i < src[i] != '\0')
+for (i; src[i] != '\0')
 {
 dest[i] = src[i];
 }
