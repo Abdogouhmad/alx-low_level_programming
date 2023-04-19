@@ -1,5 +1,4 @@
 #include "function_pointers.h"
-#include <stdio.h>
 /*by div-styl*/
 /**
  * array_iterator -function that executes a function given
