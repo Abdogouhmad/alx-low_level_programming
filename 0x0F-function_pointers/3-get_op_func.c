@@ -1,5 +1,6 @@
 #include "3-calc.h"
 #include <stdlib.h>
+#include <stdio.h>
 /*by div-styl*/
 /**
  * get_op_func -select the correct op
