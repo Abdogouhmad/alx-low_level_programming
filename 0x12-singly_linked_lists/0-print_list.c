@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 /*by div-styl*/
 /**
  * print_list - prints all the elements of a list_t list
@@ -12,8 +12,8 @@ size_t print_list(const list_t *h)
 
 	while (h != NULL)
 	{
-		if (h->str == NULL)
-			printf("[%d] %s\n",  h->len, h->str);
+		if (h->str)
+			printf("[%u] %s\n",  h->len, h->str);
 		else
 			printf("[0] (nil)\n");
 
