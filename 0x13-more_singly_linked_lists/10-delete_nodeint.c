@@ -21,12 +21,12 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		return (1);
 	}
 
-	while (crtnode < index - 1 && crtnode->next != NULL)
+	while (i < index - 1 && crtnode->next != NULL)
 	{
 		crtnode = crtnode->next;
 		i++;
 	}
-	if (crtnode <  index - 1 || crtnode->next == NULL)
+	if (i <  index - 1 || crtnode->next == NULL)
 		return (-1);
 	temp = crtnode->next;
 	crtnode->next = temp->next;
