@@ -9,25 +9,33 @@
 */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *newNode, *tempo = *head;
+	listint_t *newNode, *tempo;
 	unsigned int i;
 
 	if (head == NULL)
 		return (NULL);
-	if (idx == 0)
-		return (add_nodeint_end(head, n));
 	newNode = malloc(sizeof(listint_t));
 	if (newNode == NULL)
 		return (NULL);
 	newNode->n = n;
-	for (i = 0; i < idx - 1 && tempo != NULL; i++)
-		tempo = tempo->next;
-	if (tempo == NULL)
+	if  (idx == 0)
 	{
-		free(newNode);
-		return  (NULL);
+		newNode->next = *head;
+		*head = newNode;
+		return (newNode);
+	}
+	tempo = *head;
+	for (i = 0; i < idx - 1; i++)
+	{
+		if (tempo == NULL)
+		{
+			free(newNode);
+			return (NULL);
+		}
+		tempo = tempo->next;
 	}
 	newNode->next = tempo->next;
 	tempo->next = newNode;
+
 	return (newNode);
 }
