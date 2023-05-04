@@ -7,22 +7,21 @@
 */
 void print_binary(unsigned long int n)
 {
-	unsigned long int take = 1;
+	unsigned  long int i = 1;
+	int count = sizeof(n) * 8 - 1, lp;
 
 	if (n == 0)
 	{
 		_putchar('0');
 		return;
 	}
-	while (take <= n)
-		take =  take << 1;
-	take =   take >> 1;
-	while (take > 0)
+	while ((n & (i << count)) == 0)
+		count--;
+	for (lp = count; lp >= 0; lp--)
 	{
-		if (n & take)
+		if ((n & (i << lp)))
 			_putchar('1');
 		else
 			_putchar('0');
-		take =  take / 2;
 	}
 }
