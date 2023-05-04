@@ -1,5 +1,5 @@
-#ifndef BITE_H
-#define BITE_H
+#ifndef MAIN_H
+#define MAIN_H
 /*headers*/
 #include <stdio.h>
 #include <stdlib.h>

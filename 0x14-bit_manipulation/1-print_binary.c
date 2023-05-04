@@ -1,4 +1,4 @@
-#include "bite.h"
+#include "main.h"
 /*by div-styl*/
 /**
  * print_binary - print binary

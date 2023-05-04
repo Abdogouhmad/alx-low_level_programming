@@ -1,4 +1,4 @@
-#include "bite.h"
+#include "main.h"
 /*by div-styl*/
 /**
  * binary_to_uint - convert from binary to decimal

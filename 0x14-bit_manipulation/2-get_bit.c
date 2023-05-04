@@ -1,4 +1,4 @@
-#include "bite.h"
+#include "main.h"
 /*by div-styl*/
 /**
  * get_bit -returns the value of a bit at a given index.
