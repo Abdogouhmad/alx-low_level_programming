@@ -15,8 +15,8 @@ void print_binary(unsigned long int n)
 		return;
 	}
 	while (take <= n)
-		take *= 2;
-	take  /= 2;
+		take =  take << 1;
+	take =   take >> 1;
 	while (take > 0)
 	{
 		if (n & take)
