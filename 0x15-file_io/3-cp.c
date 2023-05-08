@@ -30,7 +30,7 @@ void close_file(int fd)
 	if (closefile == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
-		exite(100);
+		exit(100);
 	}
 }
 /**
@@ -39,7 +39,7 @@ void close_file(int fd)
  * @argv: argument vector
  * Return: 0
 */
-int main(int argc, char **argv[])
+int main(int argc, char *argv[])
 {
 	int fd_from, fd_to, r, w;
 	char *buffer;
