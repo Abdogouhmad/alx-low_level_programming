@@ -8,10 +8,9 @@
 */
 int create_file(const char *filename, char *text_content)
 {
-	int fdiscriptor, len = 0;
-	size_t i;
+	int fdiscriptor, len = 0, wr;
 
-	if (!filename)
+	if (filename == NULL)
 		return (-1);
 	if (text_content)
 	{
@@ -23,8 +22,8 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	if (text_content == NULL)
 	{
-		i = write(fdiscriptor, text_content, len);
-		if (i == (size_t)-1)
+		wr = write(fdiscriptor, text_content, len);
+		if (wr == -1)
 		{
 			close(fdiscriptor);
 			return (-1);
