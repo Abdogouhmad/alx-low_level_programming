@@ -8,7 +8,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 {
 	unsigned long int i;
 	/*allocate memory for the hash tables*/
-	hash_table_t *hs = malloc(sizeof(hash_node_t));
+	hash_table_t *hs = malloc(sizeof(hash_table_t));
 
 	/*check if the allocation failed if so retunr null*/
 	if (hs == NULL)

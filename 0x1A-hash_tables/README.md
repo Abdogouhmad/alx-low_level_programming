@@ -1,4 +1,4 @@
-# Hash Tables
+ Hash Tables
 
 This repository contains C programs that demonstrate the implementation of hash tables and related operations.
 
