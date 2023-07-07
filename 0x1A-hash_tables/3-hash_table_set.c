@@ -12,10 +12,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *new_node = (hash_node_t *)malloc(sizeof(hash_node_t));
 	hash_node_t *current;
 
-	/* if (new_node == NULL)*/
-		/*return (0);*/
 	/*CHECK IF THE VALUES ARE EMPTY RETURN 0 AS FAILIER*/
 	if (ht == NULL || key == NULL || strcmp(key, "") == 0 || value == NULL)
+		return (0);
+	if (*key == '\0' || new_node == NULL)
 		return (0);
 
 	/*get the hashed key */
@@ -39,7 +39,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	/*check if the array is empyt*/
 
 	/*if (ht->array[index] == NULL)*/
-		/*ht->array[index] = new_node;*/
+	/*ht->array[index] = new_node;*/
 
 	/*IF THE COLLISION OCCURED THEN UPDATE THE INDEX WITH NEW NODE*/
 	new_node->next = ht->array[index];
