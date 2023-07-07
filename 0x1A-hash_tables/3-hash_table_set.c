@@ -13,7 +13,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	/*CHECK IF THE VALUES ARE EMPTY RETURN 0 AS FAILIER*/
 	if (ht == NULL || key == NULL || strcmp(key, "") == 0)
 		return (0);
-	if (value == NULL || new_node == NULL)
+	if (value == NULL || new_node == NULL || *key == '\0')
 		return (0);
 
 	/*get the hashed key */
