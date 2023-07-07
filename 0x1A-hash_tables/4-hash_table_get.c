@@ -11,7 +11,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	hash_node_t *current = ht->array[index];
 
 	/*check over the hash table and the key if the are not empty*/
-	if (ht == NULL || key == NULL || *key == '\0')
+	if (ht == NULL || key == NULL || *key == '\0' || current == NULL)
 		return (NULL);
 
 	/*check if the index is not exceeded the max of the size*/
