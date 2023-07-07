@@ -17,10 +17,6 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
     if (strcmp(key, "") == 0)
       return (NULL);
 
-    /*check if the index is not exceeded the max of the size*/
-    if (index >= ht->size)
-      return (NULL);
-
     /*loop over the */
     while (current != NULL && strcmp(current->key, key) != 0)
       current = current->next;
