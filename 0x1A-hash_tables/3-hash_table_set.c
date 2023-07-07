@@ -27,7 +27,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		{
 			free(current->value);
 			current->value = strdup(value);
-      free(new_node);
+	  free(new_node);
 			return (1);
 		}
 		current = current->next;
@@ -35,12 +35,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	/*duplicate the key and value*/
 	new_node->key = strdup(key);
 	new_node->value = strdup(value);
-	/*new_node->next = NULL;*/
 
-	/*check if the array is empyt*/
-
-	/*if (ht->array[index] == NULL)*/
-	/*ht->array[index] = new_node;*/
 
 	/*IF THE COLLISION OCCURED THEN UPDATE THE INDEX WITH NEW NODE*/
 	new_node->next = ht->array[index];
