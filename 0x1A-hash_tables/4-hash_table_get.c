@@ -1,4 +1,5 @@
 #include "hash_tables.h"
+#include <string.h>
 /**
  * hash_table_get - get the value of the key
  * @ht: the hash table
@@ -7,24 +8,27 @@
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	unsigned long int index = key_index((const unsigned char *)key, ht->size);
-	hash_node_t *current = ht->array[index];
+    unsigned long int index = key_index((const unsigned char *)key, ht->size);
+    hash_node_t *current = ht->array[index];
 
-	/*check over the hash table and the key if the are not empty*/
-	if (ht == NULL || key == NULL || *key == '\0' || current == NULL)
-		return (NULL);
+    /*check over the hash table and the key if the are not empty*/
+    if (ht == NULL || key == NULL || *key == '\0' || current == NULL)
+      return (NULL);
+    if (strcmp(key, "") == 0)
+      return (NULL);
 
-	/*check if the index is not exceeded the max of the size*/
-	if (index >= ht->size)
-		return (NULL);
+    /*check if the index is not exceeded the max of the size*/
+    if (index >= ht->size)
+      return (NULL);
 
-	/*loop over the */
-	while (current != NULL && strcmp(current->key, key) != 0)
-		current = current->next;
+    /*loop over the */
+    while (current != NULL && strcmp(current->key, key) != 0)
+      current = current->next;
 
-	/**
-	 * IF THE CURRENT IS EQUALE TO NULL THEN RETURN IT
-	 * OTHERWISE RETURN THE VALUE OF THE KEY
-	 */
-return ((current == NULL) ? NULL : current->value);
+    /**
+     * IF THE CURRENT IS EQUALE TO NULL THEN RETURN IT
+     * OTHERWISE RETURN THE VALUE OF THE KEY
+     */  
+    return ((current == NULL) ? NULL : current->value);
 }
+
