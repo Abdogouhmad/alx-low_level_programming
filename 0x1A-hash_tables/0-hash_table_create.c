@@ -11,7 +11,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 	hash_table_t *hs = malloc(sizeof(hash_node_t));
 
 	/*check if the allocation failed if so retunr null*/
-
 	if (hs == NULL)
 		return (NULL);
 
@@ -19,28 +18,16 @@ hash_table_t *hash_table_create(unsigned long int size)
 	hs->size = size;
 
 	/*allocate the memory for the array*/
-
 	hs->array = malloc(sizeof(hash_table_t *) * size);
 
 	/*check if the array has failed then return null*/
-
 	if (hs->array == NULL)
 		return (NULL);
-	/*loop over the array and init with null*/
 
+  /*loop over the array and init with null*/
 	for (i = 0; i < size; i++)
 		hs->array[i] = NULL;
 
 	return(hs);
-}
-
-
-int main(void)
-{
-    hash_table_t *ht;
-
-    ht = hash_table_create(1024);
-    printf("%p\n", (void *)ht);
-    return (EXIT_SUCCESS);
 }
 
