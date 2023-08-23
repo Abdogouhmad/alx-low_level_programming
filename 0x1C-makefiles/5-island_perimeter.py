@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""defines a function that returns the perimeter of the island described in grid"""
+"""defines a function that returns the perimeter
+of the island described in grid
+"""
 
 
 def island_perimeter(grid):
