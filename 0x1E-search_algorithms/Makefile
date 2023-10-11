@@ -32,7 +32,7 @@ $(PROG): $(OBJ)
 run: build
 	@./$(PROG)
 
-clear:
+clear: run
 	@if [ -n "$(OBJ)" ]; then \
 		for obj_file in $(OBJ); do \
 			if [ -e "$$obj_file" ]; then \
