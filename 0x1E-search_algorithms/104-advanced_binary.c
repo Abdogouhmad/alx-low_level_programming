@@ -8,7 +8,7 @@
  * @left: left bound
  * @right: right bound
  * @value: value to search for
- * 
+ *
  * Return: first index where value is located
  * Description: Recursive version of the binary search algorithm
 */
