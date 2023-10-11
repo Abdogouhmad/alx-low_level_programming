@@ -5,6 +5,7 @@
 #include    <stdio.h>
 #include    <stddef.h>
 #include    <stdlib.h>
+#include    <math.h>
 /**
  * struct listint_s - Singly linked list.
  * @n: Integer stored at the node.

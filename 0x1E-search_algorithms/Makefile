@@ -15,7 +15,7 @@ OBJ = $(SRC:.c=.o)
 #compiler variables
 
 CC = gcc
-CFLAGS = -Wall -pedantic -Werror -Wextra -std=gnu89
+CFLAGS = -Wall -pedantic -Werror -Wextra -std=gnu89 -lm
 
 #rules
 
@@ -32,7 +32,7 @@ $(PROG): $(OBJ)
 run: build
 	@./$(PROG)
 
-clear: run
+clear:
 	@if [ -n "$(OBJ)" ]; then \
 		for obj_file in $(OBJ); do \
 			if [ -e "$$obj_file" ]; then \
