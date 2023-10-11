@@ -25,11 +25,11 @@ int advanced_binary_recurive(int *array, size_t left, size_t right, int value)
 		printf("%d, ", array[i]);
 	}
 	printf("%d\n", array[i]);
-	i = (left + right) / 2;
+	i = left + (right - left) / 2;
 	if (array[i] == value && (i == left || array[i - 1] != value))
 		return (i);
 	if (array[i] >= value)
-		return (advanced_binary_recurive(array, left, i - 1, value));
+		return (advanced_binary_recurive(array, left, i, value));
 	return (advanced_binary_recurive(array, i + 1, right, value));
 }
 /**
@@ -46,7 +46,7 @@ int advanced_binary_recurive(int *array, size_t left, size_t right, int value)
 
 int advanced_binary(int *array, size_t size, int value)
 {
-	if (!array || size < 1)
+	if (!array || size == 0)
 		return (-1);
 	return (advanced_binary_recurive(array, 0, size - 1, value));
 }
